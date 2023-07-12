@@ -1,3 +1,4 @@
+### POST transactions
 POST http://localhost:3333/transactions
 content-type: application/json
 
@@ -6,3 +7,10 @@ content-type: application/json
     "type": "credit",
     "amount": 1000
 }
+
+### LIST transactions
+GET http://localhost:3333/transactions
+
+
+### GET transaction by id
+GET http://localhost:3333/transactions/4af67436-422d-4345-b240-a02e132a2695
