@@ -1,0 +1,7 @@
+{
+  "extends": ["@rocketseat/eslint-config/node"],
+  "rules": {
+    "@typescript-eslint/no-empty-function": "off",
+    "prettier/prettier": "off"
+  }
+}
