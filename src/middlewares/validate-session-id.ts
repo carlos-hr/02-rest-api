@@ -1,6 +1,10 @@
-import { FastifyReply, FastifyRequest } from 'fastify'
+import { FastifyReply, FastifyRequest, HookHandlerDoneFunction } from 'fastify'
 
-export function validateSessionId(req: FastifyRequest, res: FastifyReply) {
+export function validateSessionId(
+  req: FastifyRequest,
+  res: FastifyReply,
+  done: HookHandlerDoneFunction,
+) {
   const { sessionId } = req.cookies
 
   if (!sessionId) {
@@ -8,4 +12,6 @@ export function validateSessionId(req: FastifyRequest, res: FastifyReply) {
       error: 'Unauthorized',
     })
   }
+
+  done()
 }
