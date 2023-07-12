@@ -1,0 +1,8 @@
+POST http://localhost:3333/transactions
+content-type: application/json
+
+{
+    "title": "request",
+    "type": "credit",
+    "amount": 1000
+}
